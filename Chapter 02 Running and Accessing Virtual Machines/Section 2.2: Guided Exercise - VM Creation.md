@@ -35,15 +35,15 @@ Create a Red Hat Enterprise Linux VM from an existing MariaDB image and use it t
 2.1. From the OpenShift web console, locate the left panel. If you do not see the left panel, then click the main menu icon at the upper left of the web console.
 
 2.2. Navigate to Virtualization → VirtualMachines. From the Project search field, select the creating-accessing-vms project from the list.
-![alt text](select-project-1.png)
+![alt text](../images/select-project-1.png)
 
 
 2.3. Navigate to Create virtual machine → From template.
-![alt text](select-from-template-1.png)
+![alt text](../images/select-from-template-1.png)
 
 
 2.4. Select the Red Hat Enterprise Linux 9 VM template and click the Customize VirtualMachine button.
-![alt text](select-rh9vm.png)     
+![alt text](../images/select-rh9vm.png)     
 
 
 2.5. On the Customize template parameters page, specify databasevm as the VM name.
@@ -51,47 +51,47 @@ Create a Red Hat Enterprise Linux VM from an existing MariaDB image and use it t
 2.6. For Disk source, select the URL (creates PVC) option.
 
 2.7. Specify http://utility.lab.example.com:8080/openshift4/images/rhel9-mariadb.qcow2 in the Image URL field.
-![alt text](select-boot-source9.png)
+![alt text](../images/select-boot-source9.png)
 
 
 2.8. From the Optional parameters section, enter redhat123 for the CLOUD_USER_PASSWORD field.
-![alt text](add-cloud-user-password.png)
+![alt text](../images/add-cloud-user-password.png)
 
 
 2.9. Click the Customize VirtualMachine parameters button.
 
 2.10. Select the Scripts tab and then click the Cloud-init Edit icon.
-![alt text](edit-cloud-init.png)
+![alt text](../images/edit-cloud-init.png)
 
 
 2.11. Change the Cloud-init user to operator1 and click Apply.
-![alt text](change-cloud-init-user.png)
+![alt text](../images/change-cloud-init-user.png)
 
 
 2.12. Navigate to the Overview tab. Click the edit icon for CPU | Memory.
-![alt text](change_cpu_memory.png)
+![alt text](../images/change_cpu_memory.png)
 
 
 Increase the memory value to 4 GiB and click Save.
-![alt text](increase_memory.png)
+![alt text](../images/increase_memory.png)
 
 
 2.13. Select the Network Interface tab and confirm that the network interface type is masquerade.
-![alt text](network-interfaces.png)
+![alt text](../images/network-interfaces.png)
 
 
 2.14. Select the Disk tab and confirm that the attached disks include cloudinitdisk and rootdisk.
-![alt text](disk-definition.png)
+![alt text](../images/disk-definition.png)
 
 
 2.15. Review the settings and click Create Virtual Machine to create the VM.
-![alt text](create-virtual-machine.png)
+![alt text](../images/create-virtual-machine.png)
 
 
 3. Review the details of your new VM.
 
 3.1. From the VM Overview tab, wait until the Status changes to Running before continuing this exercise.
-![alt text](review-virtual-machine9.png)
+![alt text](../images/review-virtual-machine9.png)
 
 
 4. Access the VNC console with the virtctl command and retrieve the status of the database server.
